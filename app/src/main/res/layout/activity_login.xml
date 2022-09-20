@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearAnim"
+        android:background="@drawable/animation_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/imprima"
+            android:text="Welcome Back!!"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/login1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/imprima"
+            android:text="Let's Get Started"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@id/linearAnim"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/linearAnim"
+            android:orientation="vertical">
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="87dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                app:neumorph_shapeType="pressed">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="15dp"
+                    app:met_clearButton="true"
+                    android:layout_marginTop="12dp"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="true"
+                    android:drawableStart="@drawable/ic_baseline_email_24"
+                    android:drawablePadding="12dp"
+                    android:fontFamily="@font/imprima"
+                    android:hint="Enter Your Email"
+                    android:inputType="textEmailAddress"
+                    android:paddingVertical="6dp"
+                    android:textColor="@color/main"
+                    android:textColorHint="#969494"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:met_hideUnderline="true"
+                    app:met_textColorHint="#7B7979" />
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="87dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+
+                app:neumorph_shapeType="pressed">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="12dp"
+                    app:met_clearButton="true"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="true"
+                    android:drawableStart="@drawable/ic_baseline_lock_24"
+                    android:drawablePadding="12dp"
+                    android:fontFamily="@font/imprima"
+                    android:hint="Enter Your Password"
+                    android:inputType="textPassword"
+                    android:paddingVertical="6dp"
+                    android:textColor="@color/main"
+                    android:textColorHint="#969494"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:met_hideUnderline="true"
+                    app:met_textColorHint="#7B7979" />
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="40dp"
+                    android:buttonTint="@color/main" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/imprima"
+                    android:text="Remember Me"
+                    android:textColor="#3B3838"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <soup.neumorphism.NeumorphButton
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="43dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/imprima"
+                android:gravity="center"
+                android:text="LOGIN"
+                android:textColor="@color/main"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:neumorph_shadowElevation="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/imprima"
+                android:text="Sign in With"
+                android:textColor="#3B3838"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_marginTop="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+                <soup.neumorphism.NeumorphImageView
+                    android:layout_width="65dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_height="65dp"
+                    android:padding="15dp"
+                    app:neumorph_shapeType="flat"
+                    app:neumorph_shadowElevation="4dp"
+                    android:src="@drawable/ic_icons8_facebook"/>
+                <soup.neumorphism.NeumorphImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:padding="15dp"
+                    app:neumorph_shapeType="flat"
+                    app:neumorph_shadowElevation="4dp"
+                    android:src="@drawable/ic_icons8_google"/>
+                <soup.neumorphism.NeumorphImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:padding="15dp"
+                    app:neumorph_shapeType="flat"
+                    app:neumorph_shadowElevation="4dp"
+                    android:src="@drawable/ic_icons8_github"/>
+                <soup.neumorphism.NeumorphImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:padding="15dp"
+                    app:neumorph_shapeType="flat"
+                    app:neumorph_shadowElevation="4dp"
+                    android:src="@drawable/ic_icons8_twitter_circled"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't Have an Account ? "
+                    android:textColor="#3B3838"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/signUpActivity"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Up Now"
+                    android:textColor="@color/main"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/imprima"
+                    android:layout_marginStart="10dp"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>
